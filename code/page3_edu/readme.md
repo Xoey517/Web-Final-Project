@@ -1,31 +1,27 @@
-# Web前端期末作业 - 主题三：智学云课堂 (教育课程页)
+# 🎓 智学云课堂 (Smart Edu) - 在线教育平台落地页
 
-**学生信息**
-- 姓名：肖阳
-- 学号：20240409
-- 班级：数据2402班
+> 这是一个面向数据科学与编程学习的在线教育平台展示页。
+> 项目采用现代化的 **CSS Grid** 布局技术，实现了一个完全自适应的课程卡片列表展示系统。
 
----
+## 🌟 项目亮点
+- **现代化布局 (CSS Grid)**：
+  - 使用 `grid-template-columns: repeat(auto-fit, ...)` 语法。
+  - **无需媒体查询** 即可实现课程卡片在 PC、平板、手机端的自动换行与列宽调整。
+- **UI/UX 设计**：
+  - 采用“科技蓝”为主色调，设计了专业的课程卡片组件（包含 Tag、价格、CTA 按钮）。
+  - 实现了平滑滚动 (Smooth Scroll) 和卡片悬停上浮 (`transform`) 的微交互。
+- **组件化思维**：
+  - 将导航栏、Hero Banner、课程卡片封装为独立的 CSS 类，代码结构清晰，易于维护。
 
-## 1. 项目简介
-本项目是一个独立运行的在线编程教育展示页，名为“智学云课堂”。针对数据科学专业背景，设计了包含 Python、前端和 AI 的课程展示，整体风格为现代化的科技蓝。
+## 🛠️ 技术栈
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white)
+![Grid](https://img.shields.io/badge/Layout-CSS%20Grid-blueviolet?style=flat-square)
 
-## 2. 技术亮点 (满足评分标准)
-### (1) 布局方式：Grid 网格布局
-本项目主要使用了 **CSS Grid** (display: grid) 来实现课程卡片的排列。
-- 核心代码 `repeat(auto-fit, minmax(300px, 1fr))` 实现了极其优雅的响应式布局，无需大量的 Media Queries 即可让卡片在不同宽度的屏幕上自动换行和调整列宽。
-
-### (2) 组件化设计
-- **课程卡片 (Card)**：封装了图片、标签 (Badge)、标题、价格和按钮，结构清晰。
-- **粘性导航 (Sticky Nav)**：顶部导航栏使用了 position: sticky，在滚动时始终吸附在页面顶部。
-
-### (3) 交互效果
-- **Hover 动效**：鼠标悬停在课程卡片上时，卡片会上浮并加深阴影，产生“浮起来”的视觉效果。
-- **平滑滚动**：点击 Banner 上的“开始学习”按钮，页面会平滑滚动至课程列表区。
-- **JS 弹窗**：点击报名时会触发确认弹窗，提升用户体验。
-
-## 3. 文件列表
-- `images/`: 存放 c1.jpg, c2.jpg, c3.jpg, banner.jpg。
-- `index.html`: 页面结构。
-- `style.css`: 样式文件 (Grid布局核心)。
-- `script.js`: 交互逻辑。
+## 📂 文件结构
+```text
+page3_edu/
+├── index.html      # 页面结构
+├── style.css       # 核心样式 (Grid 布局实现)
+├── script.js       # 模拟报名与滚动交互
+└── images/         # 课程封面图

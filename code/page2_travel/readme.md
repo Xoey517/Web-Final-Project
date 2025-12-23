@@ -1,33 +1,29 @@
-# Web前端期末作业 - 主题二：星城长沙旅游页
+# 🔥 星城长沙 (Changsha Travel) - 城市旅游宣传页
 
-**学生信息**
-- 姓名：肖阳
-- 学号：20240409
-- 班级：数据2402班
+> 这是一个基于 HTML5 + CSS3 开发的城市旅游宣传单页应用。
+> 项目以“网红城市”长沙为主题，通过经典的浮动布局与响应式设计，展示了城市风光、景点介绍及在线预约功能。
 
----
+## 🌟 项目亮点
+- **经典布局实践**：回归使用 **CSS Float (浮动)** 进行页面排版，深入理解清除浮动 (`clearfix`) 原理。
+- **复杂图文混排**：
+  - “关于星城”板块实现左右两栏图文布局。
+  - “网红打卡”板块实现三栏并列的卡片式布局。
+- **响应式适配**：
+  - 使用 `@media` 媒体查询适配移动端设备。
+  - 在小屏幕下自动取消浮动，将多栏布局平滑转换为单栏堆叠显示。
+- **交互功能**：
+  - 顶部导航栏吸顶效果 (`position: sticky`)。
+  - 底部表单拦截默认提交行为，使用 JavaScript 模拟“预约成功”反馈。
 
-## 1. 项目简介
-本项目是以“网红城市”长沙为主题的旅游宣传页面。整体设计风格采用了热情的**橙红色**作为主色调，体现长沙“热辣”的城市性格和丰富的美食文化。
+## 🛠️ 技术栈
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white)
+![Layout](https://img.shields.io/badge/Layout-Float-orange?style=flat-square)
 
-## 2. 技术实现 (Layout & Design)
-
-### (1) Float 浮动布局
-为了满足“至少使用两种布局方式”的评分要求，本项目与主题一（Flex/Grid）区分开来，回归了经典的浮动布局：
-- **两栏布局**：在“关于星城”板块，图片设为左浮动 (float: left)，文字设为右浮动 (float: right)。
-- **三栏布局**：在“网红打卡”板块，三个景点卡片均设为左浮动，并通过百分比宽度控制间距。
-- **清除浮动**：定义了通用类 .clearfix (使用伪元素 ::after)，用于解决父元素高度塌陷问题。
-
-### (2) 响应式适配
-- 使用了 @media 查询适配移动端。
-- 在小屏幕设备上强制将所有浮动元素设为 float: none，使并排的内容自动变为单列垂直堆叠，保证手机浏览体验。
-
-### (3) 交互功能
-- **Banner 交互**：点击“查看美食攻略”会弹出 JavaScript 编写的 Alert 提示框，列出茶颜悦色等推荐。
-- **表单验证**：底部预约表单使用了 required 属性验证非空，提交时触发 JS 事件并弹出成功提示。
-
-## 3. 文件列表
-- `images/`: 包含 banner.jpg, s1.jpg (橘子洲), s2.jpg (岳麓山), s3.jpg (美食)。
-- `index.html`: 页面结构文件。
-- `style.css`: 样式文件 (Float 布局)。
-- `script.js`: 交互逻辑脚本。
+## 📂 文件结构
+```text
+page2_travel/
+├── index.html      # 首页结构
+├── style.css       # 样式表 (核心包含 .clearfix 与 @media 适配)
+├── script.js       # 表单验证与交互逻辑
+└── images/         # 景点与美食图片素材
