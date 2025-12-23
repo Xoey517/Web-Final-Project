@@ -1,37 +1,27 @@
-# Web前端期末作业 - 主题一：解忧杂货铺
+# 🛒 解忧杂货铺 (Grocery Store) - 电商首页 demo
 
-**学生信息**
-- 姓名：肖阳
-- 学号：20240409
-- 班级：数据2402班
+> 这是一个基于 HTML5 + CSS3 开发的响应式电商网站首页。
+> 项目旨在模拟一个“治愈系”数码与生活好物的在线购物体验，实现了完整的商品展示与交互流程。
 
----
+## 🌟 项目亮点
+- **响应式排版**：使用 **CSS Grid** 实现商品列表在 PC (4列)、平板 (2列)、手机 (1列) 之间的自动切换。
+- **现代化布局**：顶部导航采用 **Flexbox** 弹性布局，底部页脚使用 **Sticky Footer** 方案，确保内容较少时页脚依然沉底。
+- **交互细节**：
+  - 纯 CSS 实现的 Hover 上浮与阴影加深特效。
+  - JavaScript 模拟购物车“结算”功能的交互反馈。
+- **语义化标签**：完全遵循 HTML5 语义化标准 (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`)。
 
-## 1. 项目概述
-本项目是基于 HTML5 和 CSS3 开发的“解忧杂货铺”电商购物网站首页。整体设计风格偏向简约温馨，旨在模拟一个提供治愈系商品（如耳机、机械键盘等解压好物）的在线购物体验。
+## 🛠️ 技术栈
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
 
-## 2. 核心功能与技术实现
-为了严格满足大作业评分标准，本项目实现了以下核心功能：
-
-### (1) 页面布局 (Layout)
-- **头部导航**：使用了 **Flex 弹性布局**，实现了 Logo 与导航菜单的左右对齐及垂直居中。
-- **商品展示**：使用了 **Grid 网格布局**，实现了响应式的行列切换。在 PC 端展示为 4 列，平板端自动切换为 2 列，手机端切换为 1 列。
-- **页脚处理**：使用了 Sticky Footer 技术方案，确保无论页面内容多少，版权页脚永远位于视口最底部。
-
-### (2) 关键技术应用
-- **HTML5 语义化标签**：使用了 header, nav, section, main, footer 等标签，确保代码结构符合规范。
-- **CSS3 动画效果**：
-  1. **交互反馈**：导航栏链接 Hover 时有平滑的颜色渐变效果。
-  2. **视觉增强**：商品卡片 Hover 时有上浮位移及阴影加深效果，增加点击欲望。
-- **多页面跳转**：实现了首页、详情页、购物车页之间的真实跳转流程。
-
-## 3. 文件结构说明
-- `images/`: 存放所有本地化的商品图片资源。
-- `index.html`: “解忧杂货铺”首页入口。
-- `detail.html`: 通用详情页（承接“新品”、“热销”及 Banner 的点击跳转）。
-- `cart.html`: 购物车展示页。
-- `style.css`: 核心样式表，包含 Reset、布局及媒体查询代码。
-- `script.js`: 简单的 JavaScript 脚本，用于控制台输出调试信息。
-
-## 4. 特别备注
-为了保证每个主题网页的独立性，在 `cart.html` 页面点击“去结算”按钮时，使用了 JavaScript (`onclick`) 模拟结算交互反馈（弹窗提示），而非直接跳转，确保演示过程流畅且无死链。
+## 📂 文件结构
+```text
+page1_shop/
+├── index.html      # 首页入口
+├── detail.html     # 商品详情页 (Flex布局图文混排)
+├── cart.html       # 购物车页 (模拟弹窗交互)
+├── style.css       # 核心样式表 (包含 Reset 与 Grid/Flex 布局)
+├── script.js       # 简单的交互逻辑
+└── images/         # 项目资源图片
