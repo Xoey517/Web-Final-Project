@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>星城长沙 - 旅游宣传</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="header">
+        <div class="container clearfix">
+            <div class="logo">🔥 星城长沙</div>
+            <ul class="nav">
+                <li><a href="#" class="active">首页</a></li>
+                <li><a href="#about">魅力星城</a></li>
+                <li><a href="#scenery">网红打卡</a></li>
+                <li><a href="#contact">预约行程</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="banner">
+        <div class="banner-text">
+            <h1>热辣长沙，不夜之城</h1>
+            <p>喝一杯茶颜，吃一碗粉，感受湘江北去的豪迈</p>
+        </div>
+    </div>
+
+    <div id="about" class="container section clearfix">
+        <h2 class="section-title">关于星城</h2>
+        <div class="col-left">
+            <img src="images/banner.jpg" alt="长沙夜景" class="about-img">
+        </div>
+        <div class="col-right">
+            <h3>一座来了就不想走的城市</h3>
+            <p>长沙，湖南省会，别称“星城”。这里有三千年不变的城址，也有凌晨三点依然人声鼎沸的解放西路。</p>
+            <p>从岳麓山的千年文脉，到街头巷尾的烟火气，长沙用它的热辣与包容，等待着每一位旅人的到来。</p>
+            <br>
+            <button onclick="showAlert()" class="btn">查看美食攻略</button>
+        </div>
+    </div>
+
+    <div id="scenery" class="bg-gray">
+        <div class="container section clearfix">
+            <h2 class="section-title">必玩景点</h2>
+            
+            <div class="col-3">
+                <div class="card">
+                    <img src="images/s1.jpg" alt="橘子洲">
+                    <div class="card-body">
+                        <h4>橘子洲头</h4>
+                        <p>独立寒秋，湘江北去。在青年毛泽东雕像前，感受伟人情怀与湘江壮阔。</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-3">
+                <div class="card">
+                    <img src="images/s2.jpg" alt="岳麓山">
+                    <div class="card-body">
+                        <h4>岳麓书院</h4>
+                        <p>惟楚有材，于斯为盛。中国四大书院之一，探寻千年湖湘文化的源头。</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-3">
+                <div class="card">
+                    <img src="images/s3.jpg" alt="坡子街">
+                    <div class="card-body">
+                        <h4>坡子街美食</h4>
+                        <p>臭豆腐、糖油粑粑、口味虾。在这里，唯有美食与爱不可辜负。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="contact" class="container section">
+        <h2 class="section-title">定制您的长沙之旅</h2>
+        <div class="form-box">
+            <form onsubmit="submitForm(event)">
+                <label>您的姓名：</label>
+                <input type="text" placeholder="请输入姓名" required>
+                
+                <label>联系方式：</label>
+                <input type="tel" placeholder="请输入手机号" required>
+                
+                <label>想玩的景点/备注：</label>
+                <textarea rows="4" placeholder="例如：我想去文和友吃小龙虾..."></textarea>
+                
+                <button type="submit" class="btn btn-block">立即提交预约</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2025 长沙文旅推广中心 版权所有</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

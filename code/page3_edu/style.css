@@ -1,0 +1,209 @@
+/* style.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+    background-color: #f4f6f8;
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header */
+.header {
+    background: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    position: sticky; /* 粘性定位：滚动时吸顶 */
+    top: 0;
+    z-index: 100;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #0056b3; /* 科技蓝 */
+}
+
+.header nav a {
+    text-decoration: none;
+    color: #555;
+    margin: 0 15px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.header nav a:hover, .header nav a.active {
+    color: #0056b3;
+}
+
+.btn-login {
+    padding: 8px 20px;
+    background: #0056b3;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+.btn-login:hover { background: #004494; }
+
+/* Hero Banner */
+.hero {
+    /* 蓝色渐变遮罩 + 背景图 */
+    background-image: linear-gradient(rgba(0,86,179,0.8), rgba(0,86,179,0.8)), url('images/banner.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+    margin-bottom: 40px;
+}
+
+.hero h1 { font-size: 3rem; margin-bottom: 20px; }
+.hero p { font-size: 1.2rem; margin-bottom: 30px; opacity: 0.9; }
+
+.btn-primary {
+    padding: 12px 30px;
+    background: white;
+    color: #0056b3;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: transform 0.2s;
+}
+.btn-primary:hover { transform: scale(1.05); }
+
+/* Course Section */
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.filters .filter-tag {
+    display: inline-block;
+    padding: 5px 15px;
+    margin-left: 10px;
+    cursor: pointer;
+    color: #666;
+    border-radius: 15px;
+    transition: all 0.3s;
+}
+.filters .filter-tag.active, .filters .filter-tag:hover {
+    background: #e3f2fd;
+    color: #0056b3;
+    font-weight: bold;
+}
+
+/* --- 课程列表区域：Grid 网格布局 --- */
+.course-grid {
+    display: grid;
+    /* 自动适应列数，每列最小300px，空间不够自动换行 */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+/* 课程卡片 */
+.course-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* 动画效果：卡片悬浮上移 */
+.course-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.card-img {
+    height: 180px;
+    position: relative;
+}
+
+.card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #ffc107;
+    color: #333;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+.badge.new { background: #28a745; color: white; }
+
+.card-body { padding: 20px; }
+.category { font-size: 0.8rem; color: #888; text-transform: uppercase; }
+.course-card h3 { margin: 10px 0; font-size: 1.2rem; }
+.course-card p { color: #666; font-size: 0.9rem; line-height: 1.5; margin-bottom: 20px; }
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+}
+
+.price { color: #d32f2f; font-weight: bold; font-size: 1.1rem; }
+
+.btn-outline {
+    background: transparent;
+    border: 1px solid #0056b3;
+    color: #0056b3;
+    padding: 5px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.btn-outline:hover {
+    background: #0056b3;
+    color: white;
+}
+
+footer {
+    background: #343a40;
+    color: #aaa;
+    text-align: center;
+    padding: 30px;
+    margin-top: auto;
+}
+
+/* 移动端简单适配 */
+@media (max-width: 768px) {
+    .section-header { flex-direction: column; align-items: flex-start; gap: 10px; }
+    .filters { margin-left: -10px; }
+    .hero h1 { font-size: 2rem; }
+    .navbar { flex-direction: column; height: auto; padding: 10px; }
+    .header nav a { margin: 5px; font-size: 0.9rem; }
+}

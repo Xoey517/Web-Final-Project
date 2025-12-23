@@ -1,0 +1,199 @@
+/* 全局重置 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 核心布局：使用Flex使Footer沉底 */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
+}
+
+/* 核心布局：Main区域自适应撑开 */
+main.container {
+    width: 90%;
+    margin: 30px auto;
+    flex: 1; 
+}
+
+/* --- 导航栏 (Flex布局) --- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 1rem 5%;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s; /* 动画1：颜色过渡 */
+}
+
+.nav-links a:hover {
+    color: #ff6b6b;
+}
+
+.user-actions a {
+    color: white; 
+    text-decoration: none; 
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+/* --- Banner区域 --- */
+.banner {
+    background: linear-gradient(135deg, #ff9966, #ff5e62);
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.banner h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.btn-cta {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    background: white;
+    text-decoration: none;
+    font-size: 1rem;
+    color: #ff5e62;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: transform 0.2s; /* 按钮缩放动画 */
+}
+.btn-cta:hover {
+    transform: scale(1.05);
+}
+
+/* --- 商品列表 (Grid布局) --- */
+.container h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* PC端4列 */
+    gap: 20px;
+}
+
+/* 商品卡片 */
+.product-card {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s ease; /* 动画2：卡片悬浮 */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.product-card:hover {
+    transform: translateY(-10px); 
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.product-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.price {
+    color: #ff0000;
+    font-size: 1.2rem;
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+.add-cart-btn {
+    display: block;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    margin-top: 10px;
+    transition: background 0.3s;
+}
+
+.add-cart-btn:hover {
+    background-color: #555;
+}
+
+/* --- 通用内容盒子 --- */
+.box-content {
+    background: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.back-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 25px;
+    background-color: #ff6b6b;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-right: 10px;
+    transition: background 0.3s;
+}
+.back-btn:hover {
+    background-color: #ff4757;
+}
+
+/* --- Footer --- */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    width: 100%;
+}
+
+/* --- 响应式设计 --- */
+@media (max-width: 768px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr); /* 平板2列 */
+    }
+    .navbar {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .product-grid {
+        grid-template-columns: 1fr; /* 手机1列 */
+    }
+}

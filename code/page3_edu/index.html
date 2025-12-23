@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>智学云课堂 - 在线编程教育</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container navbar">
+            <div class="logo">🎓 智学云课堂</div>
+            <nav>
+                <a href="#" class="active">首页</a>
+                <a href="#">全部课程</a>
+                <a href="#">学习路径</a>
+                <a href="#">我的学习</a>
+            </nav>
+            <div class="auth-btn">
+                <button onclick="login()" class="btn-login">学员登录</button>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>掌握未来的核心技能</h1>
+            <p>从 Python 数据分析到 AI 深度学习，每天进步一点点。</p>
+            <button class="btn-primary" onclick="scrollToCourses()">开始学习</button>
+        </div>
+    </section>
+
+    <main class="container" id="course-section">
+        <div class="section-header">
+            <h2>热门精选课程</h2>
+            <div class="filters">
+                <span class="filter-tag active">全部</span>
+                <span class="filter-tag">数据科学</span>
+                <span class="filter-tag">前端开发</span>
+                <span class="filter-tag">人工智能</span>
+            </div>
+        </div>
+
+        <div class="course-grid">
+            <div class="course-card">
+                <div class="card-img">
+                    <img src="images/c1.jpg" alt="Python数据分析">
+                    <span class="badge">热销</span>
+                </div>
+                <div class="card-body">
+                    <span class="category">数据科学</span>
+                    <h3>Python 数据分析实战</h3>
+                    <p>零基础入门，掌握 Pandas 与 Matplotlib 数据可视化核心技能。</p>
+                    <div class="card-footer">
+                        <span class="price">¥ 199</span>
+                        <button class="btn-outline" onclick="enroll('Python 数据分析')">立即报名</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="course-card">
+                <div class="card-img">
+                    <img src="images/c2.jpg" alt="Web前端开发">
+                    <span class="badge new">新课</span>
+                </div>
+                <div class="card-body">
+                    <span class="category">前端开发</span>
+                    <h3>HTML5 + CSS3 网页设计</h3>
+                    <p>打造响应式网页，从入门到精通 Web 前端开发技术。</p>
+                    <div class="card-footer">
+                        <span class="price">¥ 299</span>
+                        <button class="btn-outline" onclick="enroll('Web 前端开发')">立即报名</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="course-card">
+                <div class="card-img">
+                    <img src="images/c3.jpg" alt="人工智能基础">
+                </div>
+                <div class="card-body">
+                    <span class="category">人工智能</span>
+                    <h3>AI 深度学习导论</h3>
+                    <p>探索神经网络奥秘，开启人工智能新时代的钥匙。</p>
+                    <div class="card-footer">
+                        <span class="price">¥ 399</span>
+                        <button class="btn-outline" onclick="enroll('AI 深度学习')">立即报名</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 智学云课堂 (Smart Edu) | 数据2402班 肖阳 作品</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
